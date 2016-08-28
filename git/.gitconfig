@@ -1,0 +1,8 @@
+[user]
+	name = José Miguel
+	email = jm@0pt1mates.com
+[color]
+	ui = auto
+[push]
+	default = simple
+
