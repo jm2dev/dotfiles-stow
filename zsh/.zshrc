@@ -14,7 +14,7 @@ compinit
 # End of lines added by compinstall
 
 source /home/jm/src/github/zsh-git-prompt/zshrc.sh
-PROMPT='%B%n@%m% :: ~%b$(git_super_status) %# '
+PROMPT='%B%n@%m % :: %~ %b$(git_super_status) %# '
 
 alias et='emacsclient -t'
 alias ec='emacsclient -c'
