@@ -156,5 +156,9 @@ bar {
         status_command i3status
 }
 
+exec --no-startup-id $HOME/bin/dos-monitores.sh
 exec --no-startup-id nm-applet
 exec --no-startup-id sh $HOME/.fehbg
+exec --no-startup-id conky
+#exec --no-startup-id setxkbmap -layout us -variant altgr-intl -option compose:rctrl -option ctrl:nocaps
+exec --no-startup-id redshift-gtk
