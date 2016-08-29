@@ -1,0 +1,25 @@
+* Overview
+
+My dotfiles for linux.
+
+* Requirements
+
+- conky
+- emacs
+- git
+- i3
+- stow
+- sbt
+- screen
+- vim
+- X11
+- zsh
+
+* Usage
+
+#+BEGIN_EXAMPLE
+stow <directory>
+#+END_EXAMPLE
+
+Just an exception with sbt, as symlinks are created, sbt creates folder I don't want in this repository 
+so double ckeck **$HOME/.sbt/0.13/plugins** directory already exists before running **stow sbt**..
