@@ -31,7 +31,8 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec st -f "Inconsolata:size=13"
+#bindsym $mod+Return exec st -f "Inconsolata:size=13"
+bindsym $mod+Return exec st -f "Fira:size=14"
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -161,5 +162,5 @@ exec --no-startup-id $HOME/bin/dos-monitores.sh
 exec --no-startup-id nm-applet
 exec --no-startup-id sh $HOME/.fehbg
 exec --no-startup-id conky
-#exec --no-startup-id setxkbmap -layout us -variant altgr-intl -option compose:rctrl -option ctrl:nocaps
+exec --no-startup-id setxkbmap -layout us -variant altgr-intl -option compose:rctrl -option ctrl:nocaps
 exec --no-startup-id redshift-gtk
