@@ -19,7 +19,7 @@ gap_y 60
  
 # --- Colours, Sizes, Fonts & Margins --- #
 update_interval 2.0
-maximum_width 250
+maximum_width 520
 stippled_borders 0
 border_margin 9
 border_width 10
@@ -28,7 +28,7 @@ default_color grey
 # --- Text --- #
 draw_outline no
 draw_borders no
-font Monospace:size=8:weight=bold
+font Monospace:size=13:weight=bold
 uppercase no
 draw_shades yes
  
@@ -60,10 +60,10 @@ ${color white}Swap$color  $swapperc%   ${swapbar 6}$color
 ${color orange}DRIVES - FREE SPACE ${hr 2}$color
 ${color white}Fedora$color  ${fs_free_perc /}%$alignr${fs_free /}/ ${fs_size /}
  
-${color orange}ETHERNET (${addr eth0}) ${hr 2}$color
+${color orange}ETHERNET (${addr enp0s31f6}) ${hr 2}$color
 ${color white}Down ${alignr}${color white}Up
-${downspeedgraph eth0 25,120 002200 00ff00} ${alignr}${upspeedgraph eth0 25,120 220000 ff0000}$color
+${downspeedgraph enp0s31f6 25,120 002200 00ff00} ${alignr}${upspeedgraph enp0s31f6 25,120 220000 ff0000}$color
  
-${color orange}WIFI (${addr wlan0}) ${hr 2}$color
+${color orange}WIFI (${addr wlp4s0}) ${hr 2}$color
 ${color white}Down ${alignr}${color white}Up
-${downspeedgraph wlan0 25,120 002200 00ff00} ${alignr}${upspeedgraph wlan0 25,120 220000 ff0000}$color
+${downspeedgraph wlp4s0 25,120 002200 00ff00} ${alignr}${upspeedgraph wlp4s0 25,120 220000 ff0000}$color

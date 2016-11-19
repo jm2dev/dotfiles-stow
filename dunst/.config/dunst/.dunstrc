@@ -1,0 +1,23 @@
+# see nano /usr/share/dunst/dunstrc for all available configs
+[global]
+    #font = Share Tech Bold 20
+    font = Fira Mono 16
+    # close all notifications
+    close_all = mod4+n
+
+[urgency_low]
+    # IMPORTANT: colors have to be defined in quotation marks.
+    # Otherwise the '#' and following  would be interpreted as a comment.
+    foreground = "#b9c2cd"
+    background = "#2f343f"
+    timeout = 10
+
+[urgency_normal]
+    foreground = "#ffffff"
+    background = "#2f343f"
+    timeout = 10
+
+[urgency_critical]
+    background = "#2f343f"
+    foreground = "#34e2d4"
+    timeout = 0
