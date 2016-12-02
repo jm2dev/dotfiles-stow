@@ -42,8 +42,10 @@ ${color orange}CPU ${hr 2}$color
 ${font Arial:bold:size=8}${color #ffffff}${execi 99999 cat /proc/cpuinfo | grep "model name" -m1 | cut -d":" -f2 | cut -d" " -f2- | sed 's#Processor ##'}$font$color
 ${color white}Processes:$color $running_processes/ $processes
 ${cpugraph cpu1 25,120 333300 ff9900 } ${cpugraph cpu2 25,120 333300 ff9900}
+${cpugraph cpu3 25,120 333300 ff9900 } ${cpugraph cpu4 25,120 333300 ff9900}
 #${color #ff4400}${cpubar cpu1 3,120} ${color #ff4400}${cpubar cpu2 3,120}$color
 ${cpu cpu1}% (${freq_g 1} Ghz) ${alignr 2} (${freq_g 2} Ghz) ${cpu cpu2}%
+${cpu cpu3}% (${freq_g 3} Ghz) ${alignr 2} (${freq_g 4} Ghz) ${cpu cpu4}%
  
 ${color orange}TOP 5 PROCESSES ${hr 2}$color
 ${color #ffffff}NAME                PID      CPU      MEM
