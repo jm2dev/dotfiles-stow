@@ -14,11 +14,12 @@ compinit
 # End of lines added by compinstall
 
 source /home/jm/src/github/zsh-git-prompt/zshrc.sh
-PROMPT='%B%n@%m % :: %~ %b$(git_super_status) %# '
+PROMPT='%B%n@%m % :: %~ %b$(git_super_status)%# '
 
 alias et='emacsclient -t'
-alias ec='emacsclient -c'
-alias bloquea='i3lock -c 000000'
+alias ec='emacsclient '
+alias ecc='emacsclient -c'
+alias bloquea='i3lock -c 889da6'
 alias diferencias='git difftool --no-prompt --extcmd icdiff "$@"'
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
@@ -27,3 +28,7 @@ export NVM_DIR="/home/jm/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export GOPATH=$HOME/src/golang
+
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/src/python
+source /usr/bin/virtualenvwrapper.sh

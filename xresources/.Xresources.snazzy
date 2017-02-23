@@ -1,0 +1,69 @@
+!-----------------------------------------!
+! Colors                                  !
+!-----------------------------------------!
+!*background:   [97]#282a36
+*background:   #282a36
+*foreground:   #eff0eb
+*cursorColor:  #9aedfe
+
+*color0:      #33303b
+*color8:      #4f4b58
+*color1:      #ff5c57
+*color9:      #ff5c57
+*color2:      #5af78e
+*color10:     #5af78e
+*color3:      #f3f99d
+*color11:     #f3f99d
+*color4:      #57c7ff
+*color12:     #57c7ff
+*color5:      #ff6ac1
+*color13:     #ff6ac1
+*color6:      #9aedfe
+*color14:     #9aedfe
+*color7:      #eff0eb
+*color15:     #eff0eb
+
+!-----------------------------------------!
+! urxvt                                   !
+!-----------------------------------------!
+
+urxvt*.perl-lib: /usr/lib/urxvt/perl
+urxvt*.perl-ext-common: default,matcher,clipboard
+urxvt*.perl-matcher: 1
+urxvt*.matcher-button: 3
+urxvt*.url-launcher: firefox
+!urxvt*.matcher.button: 1
+!urxvt*.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
+
+! letter spacing
+urxvt*.letterSpace: -1
+
+urxvt*.dynamicColors: on
+urxvt*.urgentOnBell: true
+
+! cursor
+urxvt*.cursorBlink: true
+urxvt*.cursorUnderline: 0
+
+! scrollbar
+urxvt*.scrollBar: false
+
+! border
+urxvt*.borderLess: false
+urxvt*.internalBorder: 5
+urxvt*.externalBorder: 0
+
+! true transparency
+urxvt*.depth: 32
+urxvt*.background: [40]#303030
+
+! font
+!urxvt*.font: xft:Droid Sans Mono for Powerline:size=15:antialias=true
+urxvt*.font: xft:Fantasque Sans Mono:style=Regular:size=17:antialias=true
+urxvt*.boldFont: xft:Fantasque Sans Mono:style=Bold:size=17:antialias=true
+urxvt*.italicFont: xft:Fantasque Sans Mono:style=Italic:size=17:antialias=true
+urxvt*.boldItalicFont: xft:Fantasque Sans Mono:style=Bold Italic:size=17:antialias=true
+!urxvt*.font: xft:Inconsolata:size=16:antialias=true
+!urxvt*.boldFont: xft:Inconsolata:style=bold:size=16:antialias=true
+!urxvt*.italicFont: xft:Inconsolata:style=italic:size=16:antialias=true
+!urxvt*.boldItalicFont: xft:Inconsolata:style=bolditalic:size=16:antialias=true

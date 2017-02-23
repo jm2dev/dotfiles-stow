@@ -72,15 +72,11 @@ urxvt*.depth: 32
 urxvt*.background: [40]#303030
 
 ! font
-urxvt*.font: xft:Droid Sans Mono for Powerline:style=Regular:size=19:antialias=true
-urxvt*.boldFont: xft:Droid Sans Mono for Powerline:style=Bold:size=19:antialias=true
-urxvt*.italicFont: xft:Droid Sans Mono for Powerline:style=Italic:size=19:antialias=true
-urxvt*.boldItalicFont: xft:Droid Sans Mono for Powerline:style=Bold Italic:size=19:antialias=true
 !urxvt*.font: xft:Droid Sans Mono for Powerline:size=15:antialias=true
-!!urxvt*.font: xft:Fantasque Sans Mono:style=Regular:size=19:antialias=true
-!!urxvt*.boldFont: xft:Fantasque Sans Mono:style=Bold:size=19:antialias=true
-!!urxvt*.italicFont: xft:Fantasque Sans Mono:style=Italic:size=19:antialias=true
-!!urxvt*.boldItalicFont: xft:Fantasque Sans Mono:style=Bold Italic:size=19:antialias=true
+urxvt*.font: xft:Fantasque Sans Mono:style=Regular:size=17:antialias=true
+urxvt*.boldFont: xft:Fantasque Sans Mono:style=Bold:size=17:antialias=true
+urxvt*.italicFont: xft:Fantasque Sans Mono:style=Italic:size=17:antialias=true
+urxvt*.boldItalicFont: xft:Fantasque Sans Mono:style=Bold Italic:size=17:antialias=true
 !urxvt*.font: xft:Inconsolata:size=16:antialias=true
 !urxvt*.boldFont: xft:Inconsolata:style=bold:size=16:antialias=true
 !urxvt*.italicFont: xft:Inconsolata:style=italic:size=16:antialias=true
