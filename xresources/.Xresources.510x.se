@@ -1,0 +1,38 @@
+URxvt.termName:         rxvt-256color
+URxvt.reverseVideo:     True
+
+urxvt*.font: xft:Droid Sans Mono for Powerline:style=Regular:size=19:antialias=true
+urxvt*.boldFont: xft:Droid Sans Mono for Powerline:style=Bold:size=19:antialias=true
+urxvt*.italicFont: xft:Droid Sans Mono for Powerline:style=Italic:size=19:antialias=true
+urxvt*.boldItalicFont: xft:Droid Sans Mono for Powerline:style=Bold Italic:size=19:antialias=true
+!URxvt.font:             xft:inconsolata:pixelsize=14
+URxvt.letterSpace:      -1
+
+URxvt.perl-ext-common:  default,matcher
+URxvt.urlLauncher:      firefox
+URxvt.matcher.button:   1
+
+URxvt.saveLines:        14095
+
+! Low contrast theme, based on Zenburn <http://slinky.imukuppi.org/zenburnpage/>
+! Modified from <https://gist.github.com/564084>
+URxvt.foreground:       #0c0c0c
+URxvt.color0:           #3f3f3f
+URxvt.color1:           #705050
+URxvt.color2:           #00b45a
+URxvt.color3:           #dfcf8f
+URxvt.color4:           #506070
+URxvt.color5:           #dc8cc3
+URxvt.color6:           #8cd0d3
+URxvt.color7:           #dcdccc
+URxvt.color8:           #709080
+URxvt.color9:           #cc5454
+URxvt.color10:          #4d9f4d
+URxvt.color11:          #f0dfaf
+URxvt.color12:          #4186be
+URxvt.color13:          #ec93d3
+URxvt.color14:          #93e0e3
+URxvt.color15:          #ffffff
+
+!Disables the insanely annoying Ctrl+Shift shortcut that enters ISO14755 mode
+URxvt.iso14755:         False

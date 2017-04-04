@@ -1,0 +1,87 @@
+!-----------------------------------------!
+! Colors                                  !
+!-----------------------------------------!
+*background:            #272827
+*foreground:            #657b83
+*fading:                15
+*fadeColor:             black
+*cursorColor:           #16A085
+*pointerColorBackground:#2B2C2B
+*pointerColorForeground:#16A085
+
+!! black dark/light
+*color0:                #282928
+*color8:                #272827
+
+!! red dark/light
+*color1:                #983133
+*color9:                #985F31
+
+!! green dark/light
+*color2:                #1D584D
+*color10:               #16A085
+
+!! yellow dark/light
+*color3:                #5CE022
+*color11:               #63B93D
+
+!! blue dark/light
+*color4:                #001B33
+*color12:               #839496
+
+!! cyan dark/light
+*color6:                #4F6A98
+*color14:               #2269E0
+
+!! white dark/light
+*color7:                #fdf6e3
+*color15:               #fdf6e3
+
+!-----------------------------------------!
+! urxvt                                   !
+!-----------------------------------------!
+
+urxvt*.perl-lib: /usr/lib/urxvt/perl
+urxvt*.perl-ext-common: default,matcher,clipboard
+urxvt*.perl-matcher: 1
+urxvt*.matcher-button: 3
+urxvt*.url-launcher: firefox
+!urxvt*.matcher.button: 1
+!urxvt*.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
+
+! letter spacing
+urxvt*.letterSpace: -1
+
+urxvt*.dynamicColors: on
+urxvt*.urgentOnBell: true
+
+! cursor
+urxvt*.cursorBlink: true
+urxvt*.cursorUnderline: 0
+
+! scrollbar
+urxvt*.scrollBar: false
+
+! border
+urxvt*.borderLess: false
+urxvt*.internalBorder: 5
+urxvt*.externalBorder: 0
+
+! true transparency
+urxvt*.depth: 32
+urxvt*.background: [40]#303030
+
+! font
+urxvt*.font: xft:Droid Sans Mono for Powerline:style=Regular:size=19:antialias=true
+urxvt*.boldFont: xft:Droid Sans Mono for Powerline:style=Bold:size=19:antialias=true
+urxvt*.italicFont: xft:Droid Sans Mono for Powerline:style=Italic:size=19:antialias=true
+urxvt*.boldItalicFont: xft:Droid Sans Mono for Powerline:style=Bold Italic:size=19:antialias=true
+!urxvt*.font: xft:Droid Sans Mono for Powerline:size=15:antialias=true
+!!urxvt*.font: xft:Fantasque Sans Mono:style=Regular:size=19:antialias=true
+!!urxvt*.boldFont: xft:Fantasque Sans Mono:style=Bold:size=19:antialias=true
+!!urxvt*.italicFont: xft:Fantasque Sans Mono:style=Italic:size=19:antialias=true
+!!urxvt*.boldItalicFont: xft:Fantasque Sans Mono:style=Bold Italic:size=19:antialias=true
+!urxvt*.font: xft:Inconsolata:size=16:antialias=true
+!urxvt*.boldFont: xft:Inconsolata:style=bold:size=16:antialias=true
+!urxvt*.italicFont: xft:Inconsolata:style=italic:size=16:antialias=true
+!urxvt*.boldItalicFont: xft:Inconsolata:style=bolditalic:size=16:antialias=true

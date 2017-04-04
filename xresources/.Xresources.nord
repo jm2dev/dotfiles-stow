@@ -1,20 +1,3 @@
-URxvt.termName:         rxvt-256color
-URxvt.reverseVideo:     True
-
-urxvt*.font: xft:Droid Sans Mono for Powerline:style=Regular:size=19:antialias=true
-urxvt*.boldFont: xft:Droid Sans Mono for Powerline:style=Bold:size=19:antialias=true
-urxvt*.italicFont: xft:Droid Sans Mono for Powerline:style=Italic:size=19:antialias=true
-urxvt*.boldItalicFont: xft:Droid Sans Mono for Powerline:style=Bold Italic:size=19:antialias=true
-!URxvt.font:             xft:inconsolata:pixelsize=14
-URxvt.letterSpace:      -1
-
-URxvt.perl-ext-common:  default,matcher
-URxvt.urlLauncher:      firefox
-URxvt.matcher.button:   1
-
-URxvt.saveLines:        14095
-
-URxvt*.scrollBar: false
 ! +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ! title      Nord XResources                                    +
 ! project    nord-xresources                                    +
@@ -63,6 +46,3 @@ URxvt*.scrollBar: false
 *.color13: nord15
 *.color14: nord7
 *.color15: nord6
-!
-!Disables the insanely annoying Ctrl+Shift shortcut that enters ISO14755 mode
-URxvt.iso14755:         False
