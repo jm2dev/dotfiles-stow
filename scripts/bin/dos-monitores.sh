@@ -7,9 +7,9 @@ EXT="HDMI-2"
 
 if (xrandr | grep "${EXT} disconnected"); then
     xrandr --output $IN --auto $EXT --off
-    feh  --bg-fill /home/jm/Pictures/wallpapers/Fedora-Backgrounds-HD-12.jpg
+    feh  --bg-fill /home/jm/Pictures/wallpapers/happy-bird-imgur-0Fsr8ME.jpg
 else
-    xrandr --output $IN --auto --output $EXT --auto --above $IN
-    feh  --bg-fill /home/jm/Pictures/wallpapers/Fedora-Backgrounds-HD-12.jpg /home/jm/Pictures/wallpapers/Fedora-Backgrounds-HD-12.jpg
+    xrandr --output $IN --auto --output $EXT --auto --right-of $IN
+    feh  --bg-fill /home/jm/Pictures/wallpapers/happy-bird-imgur-0Fsr8ME.jpg /home/jm/Pictures/wallpapers/linux__pro__s_operating_system_by_alexdevillx-d45w5mp.jpg
 fi
 
