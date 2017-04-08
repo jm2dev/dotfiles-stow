@@ -3,6 +3,22 @@
 	email = jm@0pt1mates.com
 [color]
 	ui = auto
+
+[color "branch"]
+	current = green bold
+	remote = red bold
+
+[color "diff"]
+	meta = yellow
+	frag = cyan bold
+	old = red bold
+	new = green bold
+
+[color "status"]
+	added = green bold
+	changed = red bold
+	untracked = red bold
+
 [push]
 	default = simple
 
