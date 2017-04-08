@@ -6,3 +6,5 @@
 [push]
 	default = simple
 
+[core]
+	editor = vi
