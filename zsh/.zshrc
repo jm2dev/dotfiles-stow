@@ -22,13 +22,16 @@ alias ecc='emacsclient -c'
 alias bloquea='i3lock -c 889da6'
 alias diferencias='git difftool --no-prompt --extcmd icdiff "$@"'
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+#export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-export NVM_DIR="/home/jm/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
-export GOPATH=$HOME/src/golang
+#export GOPATH=$HOME/src/golang
 
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/src/python
-source /usr/bin/virtualenvwrapper.sh
+#fedora
+#source /usr/bin/virtualenvwrapper.sh
+#debian
+source /etc/bash_completion.d/virtualenvwrapper
