@@ -1,7 +1,7 @@
 # see nano /usr/share/dunst/dunstrc for all available configs
 [global]
     #font = Share Tech Bold 20
-    font = Fira Mono 16
+    font = Fira Mono 19
     # close all notifications
     close_all = mod4+n
 
