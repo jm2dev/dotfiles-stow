@@ -31,7 +31,13 @@ export NVM_DIR="$HOME/.nvm"
 
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/src/python
+# virtualenvwrapper
 #fedora
-#source /usr/bin/virtualenvwrapper.sh
+if [[ -f /usr/bin/virtualenvwrapper.sh ]]; then
+	source /usr/bin/virtualenvwrapper.sh
+fi
 #debian
-source /etc/bash_completion.d/virtualenvwrapper
+if [[ -f /etc/bash_completion.d/virtualenvwrapper ]]; then
+	source /etc/bash_completion.d/virtualenvwrapper
+fi
+
