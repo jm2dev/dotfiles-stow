@@ -19,9 +19,7 @@ PROMPT='%B%n@%m % :: %~ %b$(git_super_status)%# '
 alias et='emacsclient -t'
 alias ec='emacsclient '
 alias ecc='emacsclient -c'
-alias bloquea='i3lock -c 889da6'
-#http://imgur.com/gallery/A0bRg
-alias pluton='i3lock -i ~/Pictures/bloquea/pluto.png'
+alias bloquea='i3lock -i ~/Pictures/bloquea/selected'
 alias diferencias='git difftool --no-prompt --extcmd icdiff "$@"'
 
 #export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
