@@ -1,0 +1,6 @@
+* Set default terminal in debian
+
+sudo update-alternatives --config x-terminal-emulator
+
+and select the desired terminal emulator.
+
