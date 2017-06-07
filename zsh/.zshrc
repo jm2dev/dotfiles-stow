@@ -21,6 +21,8 @@ alias ec='emacsclient '
 alias ecc='emacsclient -c'
 alias bloquea='i3lock -i ~/Pictures/bloquea/selected'
 alias diferencias='git difftool --no-prompt --extcmd icdiff "$@"'
+alias colores='xrdb -I$HOME ~/.Xresources'
+
 
 #export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
