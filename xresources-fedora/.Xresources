@@ -1,0 +1,3 @@
+#include ".Xresources.d/urxvt-fedora"
+#include ".Xresources.d/nord"
+#include ".Xresources.d/rofi"
