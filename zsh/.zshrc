@@ -22,7 +22,8 @@ alias ecc='emacsclient -c'
 alias bloquea='i3lock -i ~/Pictures/bloquea/selected'
 alias diferencias='git difftool --no-prompt --extcmd icdiff "$@"'
 alias colores='xrdb -I$HOME ~/.Xresources'
-
+alias mkvirtualenv3='mkvirtualenv -p /usr/bin/python3'
+alias bateria='grep POWER_SUPPLY_CAPACITY /sys/class/power_supply/BAT0/uevent'
 
 #export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
@@ -33,13 +34,17 @@ export NVM_DIR="$HOME/.nvm"
 
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/src/python
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+
 # virtualenvwrapper
 #fedora
 if [[ -f /usr/bin/virtualenvwrapper.sh ]]; then
-	source /usr/bin/virtualenvwrapper.sh
+	  source /usr/bin/virtualenvwrapper.sh
 fi
 #debian
 if [[ -f /etc/bash_completion.d/virtualenvwrapper ]]; then
 	source /etc/bash_completion.d/virtualenvwrapper
 fi
 
+# it must be run at the end.
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
