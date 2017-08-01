@@ -1,0 +1,19 @@
+# Overriding CTRL+t 'c' to start aterm instead of xterm
+bind c exec urxvt256c
+
+bind f exec firefox
+
+exec wmname LG3D
+
+set border 0
+
+gravity ne
+
+exec /usr/bin/rpws init 6 -k
+
+exec /usr/bin/sh /home/jm/.fehbg
+
+exec setxkbmap -layout us -variant altgr-intl -option compose:rctrl -option ctrl:nocaps
+
+exec /usr/bin/conky
+
