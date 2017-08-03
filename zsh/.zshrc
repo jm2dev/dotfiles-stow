@@ -16,15 +16,6 @@ compinit
 source /home/jm/src/github/zsh-git-prompt/zshrc.sh
 PROMPT='%B%n@%m % :: %~ %b$(git_super_status)%# '
 
-alias et='emacsclient -t'
-alias ec='emacsclient '
-alias ecc='emacsclient -c'
-alias bloquea='i3lock -i ~/Pictures/bloquea/selected'
-alias diferencias='git difftool --no-prompt --extcmd icdiff "$@"'
-alias colores='xrdb -I$HOME ~/.Xresources'
-alias mkvirtualenv3='mkvirtualenv -p /usr/bin/python3'
-alias bateria='grep POWER_SUPPLY_CAPACITY /sys/class/power_supply/BAT0/uevent'
-
 #export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 export NVM_DIR="$HOME/.nvm"
