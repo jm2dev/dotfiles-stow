@@ -1,19 +1,20 @@
-# Overriding CTRL+t 'c' to start aterm instead of xterm
+startup_message off
+# logo key as replacement for CTRL+t
+escape Super_L
+definekey top M-Tab next
+
 bind c exec urxvt256c
-
+bind e exec emacs
 bind f exec firefox
-
-exec wmname LG3D
+bind m exec chrome
 
 set border 0
 
-gravity ne
+set gravity c
 
-exec /usr/bin/rpws init 6 -k
-
+#exec /usr/bin/rpws init 6 -k
+exec wmname LG3D
 exec /usr/bin/sh /home/jm/.fehbg
-
 exec setxkbmap -layout us -variant altgr-intl -option compose:rctrl -option ctrl:nocaps
-
 exec /usr/bin/conky
-
+exec st -f "Hack:pixelsize=19"
