@@ -18,11 +18,10 @@ PROMPT='%B%n@%m % :: %~ %b$(git_super_status)%# '
 
 #export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-# use n instead of nvm
-#export NVM_DIR="$HOME/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
 #export GOPATH=$HOME/src/golang
+
+# Added by n-install (see http://git.io/n-install-repo).
+export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
 
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/src/python
