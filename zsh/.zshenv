@@ -20,4 +20,6 @@ alias diferencias='git difftool --no-prompt --extcmd icdiff "$@"'
 alias colores='xrdb -I$HOME ~/.Xresources'
 alias mkvirtualenv3='mkvirtualenv -p /usr/bin/python3'
 alias bateria='grep POWER_SUPPLY_CAPACITY /sys/class/power_supply/BAT0/uevent'
+alias cromito 'chromium --force-device-scale-factor=1.5'
 alias teclado='setxkbmap -layout us -variant altgr-intl -option compose:rctrl -option ctrl:nocaps'
+
