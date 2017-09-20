@@ -1,4 +1,6 @@
 # Lines configured by zsh-newuser-install
+echo "Check git user!"
+
 HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
