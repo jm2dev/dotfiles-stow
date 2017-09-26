@@ -1,5 +1,8 @@
 # Lines configured by zsh-newuser-install
-echo "Check git user!"
+echo "========================================="
+echo "Check git user! --------> git config -l"
+echo "Check kubectl config! --> ls -lha ~/.kube"
+echo "========================================="
 
 HISTFILE=~/.histfile
 HISTSIZE=10000
