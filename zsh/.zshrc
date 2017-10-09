@@ -22,6 +22,7 @@ source /home/jm/src/github/zsh-git-prompt/zshrc.sh
 PROMPT='%B%n@%m % :: %~ %b$(git_super_status)%# '
 
 #export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+eval "$(rbenv init -)"
 
 #export GOPATH=$HOME/src/golang
 
