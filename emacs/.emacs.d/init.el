@@ -40,7 +40,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (solarized-theme zenburn-theme use-package))))
+ '(custom-safe-themes
+   (quote
+    ("bfdcbf0d33f3376a956707e746d10f3ef2d8d9caa1c214361c9c08f00a1c8409" default)))
+ '(package-selected-packages (quote (ensime solarized-theme zenburn-theme use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -58,3 +61,72 @@
 (prefer-coding-system 'utf-8)
 (when (display-graphic-p)
   (setq x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING)))
+
+
+;; https://ogbe.net/emacsconfig.html
+(load "server")
+(unless (server-running-p) (server-start))
+
+(add-hook 'server-switch-hook
+          (lambda ()
+            (when (current-local-map)
+              (use-local-map (copy-keymap (current-local-map))))
+            (local-set-key (kbd "C-x k") 'server-edit)))
+
+(menu-bar-mode -1)
+(when (display-graphic-p)
+  (tool-bar-mode -1)
+  (scroll-bar-mode -1))
+
+(load-theme 'zenburn)
+(set-face-attribute 'default nil :height 134)
+(set-face-attribute 'fringe nil :background "#2d2d2d")
+(set-face-attribute 'default nil :family "Source Code Pro")
+(set-face-attribute 'font-lock-comment-face nil :slant 'italic)
+(set-face-attribute 'font-lock-comment-face nil :weight 'semibold)
+(set-fontset-font "fontset-default" 'unicode "DejaVu Sans Mono for Powerline")
+
+(require 'linum)
+(set-face-attribute 'linum nil
+                    :background (face-attribute 'default :background)
+                    :foreground (face-attribute 'font-lock-comment-face :foreground))
+(defface linum-current-line-face
+  `((t :background "gray30" :foreground "gold"))
+  "Face for the currently active Line number")
+(defvar my-linum-current-line-number 0)
+(defun get-linum-format-string ()
+  (setq-local my-linum-format-string
+              (let ((w (length (number-to-string
+                                (count-lines (point-min) (point-max))))))
+                (concat " %" (number-to-string w) "d "))))
+(add-hook 'linum-before-numbering-hook 'get-linum-format-string)
+(defun my-linum-format (line-number)
+  (propertize (format my-linum-format-string line-number) 'face
+              (if (eq line-number my-linum-current-line-number)
+                  'linum-current-line-face
+                'linum)))
+(setq linum-format 'my-linum-format)
+(defadvice linum-update (around my-linum-update)
+  (let ((my-linum-current-line-number (line-number-at-pos)))
+    ad-do-it))
+(ad-activate 'linum-update)
+
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 2)
+(setq-default tab-stop-list (number-sequence 2 120 2))
+(setq c-basic-indent 2)
+(setq sh-basic-offset 2)
+
+(defun my-tabs-makefile-hook ()
+  (setq indent-tabs-mode t))
+(add-hook 'makefile-mode-hook 'my-tabs-makefile-hook)
+
+(defvar my-term-shell "/usr/bin/zsh")
+(defadvice ansi-term (before force-bash)
+  (interactive (list my-term-shell)))
+(ad-activate 'ansi-term)
+
+;; ensime web site
+(use-package ensime
+  :ensure t
+  :pin melpa-stable)

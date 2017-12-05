@@ -36,4 +36,7 @@ fi
 
 
 # it must be run at the end.
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# debian
+#source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# archlinux
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
