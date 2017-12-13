@@ -1,5 +1,5 @@
 [user]
-	name = José Miguel
+	name = Jose Miguel Martinez Carrasco
 	email = j.martinez-carrasco@klarna.com
 [color]
 	ui = auto
@@ -23,4 +23,4 @@
 	default = simple
 
 [core]
-	editor = vi
+	editor = emacsclient -nw

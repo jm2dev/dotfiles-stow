@@ -22,5 +22,6 @@
 [push]
 	default = simple
 
+
 [core]
-	editor = vi
+	editor = emacsclient -nw

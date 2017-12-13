@@ -12,8 +12,8 @@
 ;; buffer local variables
 (setq-default
  indent-tabs-mode nil
- tab-width 4
- c-basic-offset 4)
+ tab-width 2
+ c-basic-offset 2)
 
 ;; modes
 (electric-indent-mode 0)
@@ -47,7 +47,7 @@
             (local-set-key (kbd "C-x k") 'server-edit)))
 
 ;;(load-theme 'wombat)
-(set-face-attribute 'default nil :height 174)
+(set-face-attribute 'default nil :height 194)
 ;;(set-face-attribute 'fringe nil :background "#2d2d2d")
 (set-face-attribute 'default nil :family "Hack")
 (set-face-attribute 'font-lock-comment-face nil :slant 'italic)
@@ -66,10 +66,21 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (use-package))))
+ '(custom-enabled-themes (quote (zenburn)))
+ '(custom-safe-themes
+   (quote
+    ("bfdcbf0d33f3376a956707e746d10f3ef2d8d9caa1c214361c9c08f00a1c8409" default)))
+ '(package-selected-packages
+   (quote
+    (terraform-mode magit ensime zenburn-theme use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;; ensime
+(use-package ensime
+  :ensure t
+  :pin melpa-stable)

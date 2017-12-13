@@ -24,7 +24,8 @@ PROMPT='%B%n@%m % :: %~ %b$(git_super_status)%# '
 #export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 eval "$(rbenv init -)"
 
-#export GOPATH=$HOME/src/golang
+export GOPATH=$HOME/src/golang
+export PATH=$PATH:$GOPATH/bin
 
 # Added by n-install (see http://git.io/n-install-repo).
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
@@ -40,6 +41,15 @@ if [[ -f /usr/local/bin/virtualenvwrapper.sh ]]; then
 	  source /usr/local/bin/virtualenvwrapper.sh
 fi
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+autoload -U +X bashcompinit && bashcompinit
+complete -C /home/jm/bin/terraform terraform
+
+if [[ -f $HOME/.virtualenvs/awsclip2/bin/aws_zsh_completer.sh ]]; then
+    source $HOME/.virtualenvs/awsclip2/bin/aws_zsh_completer.sh
+fi
 
 # it must be run at the end.
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+

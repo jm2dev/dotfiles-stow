@@ -12,14 +12,15 @@
 #export LESS_TERMCAP_us=$(printf '\e[1;32m')
 #export LESS_TERMCAP_so=$(printf '\e[1;44;1m')
 
-alias et='emacsclient -t'
 alias ec='emacsclient '
 alias ecc='emacsclient -c'
-alias bloquea='i3lock -i ~/Pictures/bloquea/selected'
-alias diferencias='git difftool --no-prompt --extcmd icdiff "$@"'
-alias colores='xrdb -I$HOME ~/.Xresources'
-alias mkvirtualenv3='mkvirtualenv -p /usr/bin/python3'
+alias et='emacsclient -t'
 alias bateria='grep POWER_SUPPLY_CAPACITY /sys/class/power_supply/BAT0/uevent'
-alias cromito 'chromium --force-device-scale-factor=1.5'
+#alias bloquea='i3lock -i ~/Pictures/bloquea/selected'
+alias bloquea='/home/jm/src/github/i3lock-multimonitor-debian/lock'
+alias colores='xrdb -I$HOME ~/.Xresources'
+alias cromito='chromium --force-device-scale-factor=1.5'
+alias diferencias='git difftool --no-prompt --extcmd icdiff "$@"'
+alias mkvirtualenv3='mkvirtualenv -p /usr/bin/python3'
 alias teclado='setxkbmap -layout us -variant altgr-intl -option compose:rctrl -option ctrl:nocaps'
-
+alias adfsnonproduction='eval `aws-adfs-tool login -u j.martinez-carrasco -r Klarna_ADFS_blackjack -a klarna-non-production`'
