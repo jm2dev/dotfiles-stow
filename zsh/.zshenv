@@ -23,4 +23,4 @@ alias bateria='grep POWER_SUPPLY_CAPACITY /sys/class/power_supply/BAT0/uevent'
 alias teclado='setxkbmap -layout us -variant altgr-intl -option compose:rctrl -option ctrl:nocaps'
 
 # openjdk 9
-export JDK_HOME=/usr/lib/jvm/default
+#export JDK_HOME=/usr/lib/jvm/default
