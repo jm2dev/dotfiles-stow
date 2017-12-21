@@ -34,17 +34,15 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/src/python
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 
-# pip3 install virtualenvwrapper
-#fedora
-#debian
-if [[ -f /usr/local/bin/virtualenvwrapper.sh ]]; then
-	  source /usr/local/bin/virtualenvwrapper.sh
+# pip3 install --user virtualenvwrapper
+if [[ -f $HOME/.local/bin/virtualenvwrapper.sh ]]; then
+	  source $HOME/.local/bin/virtualenvwrapper.sh
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 autoload -U +X bashcompinit && bashcompinit
-complete -C /home/jm/bin/terraform terraform
+complete -C $HOME/bin/terraform terraform
 
 if [[ -f $HOME/.virtualenvs/awsclip2/bin/aws_zsh_completer.sh ]]; then
     source $HOME/.virtualenvs/awsclip2/bin/aws_zsh_completer.sh
