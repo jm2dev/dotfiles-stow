@@ -1,3 +1,4 @@
 #include ".Xresources.d/urxvt"
+#include ".Xresources.d/xftdpi"
 #include ".Xresources.d/nord"
 #include ".Xresources.d/rofi"
