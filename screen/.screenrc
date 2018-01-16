@@ -1,3 +1,6 @@
+defutf8 on
+utf8 on on
+startup_message off
 term xterm-color
 #term screen-256color
 
