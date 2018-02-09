@@ -1,12 +1,12 @@
 #!/usr/bin/bash
 
-IN="eDP-1"
-EXT="HDMI-2"
+IN="eDP1"
+EXT="HDMI2"
 #IN="LVDS1"
 #EXT="HDMI1"
 
 #xrandr --output $IN --auto $EXT --off
-xrandr --output eDP-1 --auto --output HDMI-2 --off
-feh  --bg-fill /home/jm/Pictures/wallpapers/happy-bird-imgur-0Fsr8ME.jpg
+xrandr --output eDP1 --auto --output HDMI2 --off
+feh  --bg-fill /home/jm/Pictures/wallpapers/arch_linux_by_shapshapy-d4gfyuf.png
 #/home/jm/Pictures/wallpapers/Fedora-Backgrounds-HD-12.jpg
 
