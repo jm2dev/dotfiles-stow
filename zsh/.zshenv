@@ -15,7 +15,7 @@
 alias et='emacsclient -t'
 alias ec='emacsclient '
 alias ecc='emacsclient -c'
-alias bloquea='i3lock -i ~/Pictures/bloquea/selected'
+alias bloquea='~/src/github/i3lock-multimonitor/lock'
 alias diferencias='git difftool --no-prompt --extcmd icdiff "$@"'
 alias colores='xrdb -I$HOME ~/.Xresources'
 alias mkvirtualenv3='mkvirtualenv -p /usr/bin/python3'
