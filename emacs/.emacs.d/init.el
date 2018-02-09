@@ -79,7 +79,7 @@
   (scroll-bar-mode -1))
 
 (load-theme 'zenburn)
-(set-face-attribute 'default nil :height 134)
+(set-face-attribute 'default nil :height 194)
 (set-face-attribute 'fringe nil :background "#2d2d2d")
 (set-face-attribute 'default nil :family "Source Code Pro")
 (set-face-attribute 'font-lock-comment-face nil :slant 'italic)
@@ -130,3 +130,24 @@
 (use-package ensime
   :ensure t
   :pin melpa-stable)
+
+;; wrap lines
+(visual-line-mode t)
+
+;; GTD
+(define-key global-map "\C-cc" 'org-capture)
+
+(setq org-agenda-files '("~/src/orgmode/gtd/inbox.org"
+                         "~/src/orgmode/gtd/gtd.org"
+                         "~/src/orgmode/gtd/tickler.org"))
+
+(setq org-capture-templates '(("t" "Todo [inbox]" entry
+                               (file+headline "~/src/orgmode/gtd/inbox.org" "Tasks")
+                               "* TODO %i%?")
+                              ("T" "Tickler" entry
+                               (file+headline "~/src/orgmode/gtd/tickler.org" "Tickler")
+                               "* %i%? \n %U")))
+
+(setq org-refile-targets '(("~/src/orgmode/gtd/gtd.org" :maxlevel . 3)
+                           ("~/src/orgmode/gtd/someday.org" :level . 1)
+                           ("~/src/orgmode/gtd/tickler.org" :maxlevel . 2)))
