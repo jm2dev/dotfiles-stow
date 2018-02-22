@@ -18,8 +18,9 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-source /home/jm/src/github/zsh-git-prompt/zshrc.sh
-PROMPT='%B%n@%m % :: %~ %b$(git_super_status)%# '
+#source /home/jm/src/github/zsh-git-prompt/zshrc.sh
+#PROMPT='%B%n@%m % :: %~ %b$(git_super_status)%# '
+source $HOME/src/github/polyglot/polyglot.sh
 
 #export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 eval "$(rbenv init -)"

@@ -47,12 +47,25 @@
             (local-set-key (kbd "C-x k") 'server-edit)))
 
 ;;(load-theme 'wombat)
-(set-face-attribute 'default nil :height 194)
+;(set-face-attribute 'default nil :height 194)
 ;;(set-face-attribute 'fringe nil :background "#2d2d2d")
-(set-face-attribute 'default nil :family "Hack")
-(set-face-attribute 'font-lock-comment-face nil :slant 'italic)
-(set-face-attribute 'font-lock-comment-face nil :weight 'semibold)
-(set-fontset-font "fontset-default" 'unicode "Hack")
+;(set-face-attribute 'default nil :family "Hack")
+;(set-face-attribute 'font-lock-comment-face nil :slant 'italic)
+;(set-face-attribute 'font-lock-comment-face nil :weight 'semibold)
+;(set-fontset-font "fontset-default" 'unicode "Hack")
+
+;; set a nice looking font
+(setq my-font-height (cond ((eq system-type 'darwin) 130)
+                           ((eq system-type 'windows-nt) 100)
+                           ((eq system-type 'gnu/linux) 190)))
+
+
+(set-face-attribute 'default nil
+                    :family "IBM Plex mono"
+                    :width 'normal
+                    :height my-font-height
+                    :weight 'normal)
+
 
 (menu-bar-mode -1)
 (when (display-graphic-p)
