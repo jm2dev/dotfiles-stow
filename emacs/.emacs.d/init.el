@@ -79,12 +79,24 @@
   (scroll-bar-mode -1))
 
 (load-theme 'zenburn)
-(set-face-attribute 'default nil :height 194)
-(set-face-attribute 'fringe nil :background "#2d2d2d")
-(set-face-attribute 'default nil :family "Source Code Pro")
-(set-face-attribute 'font-lock-comment-face nil :slant 'italic)
-(set-face-attribute 'font-lock-comment-face nil :weight 'semibold)
-(set-fontset-font "fontset-default" 'unicode "DejaVu Sans Mono for Powerline")
+;(set-face-attribute 'default nil :height 194)
+;(set-face-attribute 'fringe nil :background "#2d2d2d")
+;(set-face-attribute 'default nil :family "Source Code Pro")
+;(set-face-attribute 'font-lock-comment-face nil :slant 'italic)
+;(set-face-attribute 'font-lock-comment-face nil :weight 'semibold)
+;(set-fontset-font "fontset-default" 'unicode "DejaVu Sans Mono for Powerline")
+
+;; from https://github.com/bastibe/.emacs.d/blob/master/init.el
+(setq my-font-height (cond ((eq system-type 'darwin) 130)
+                           ((eq system-type 'windows-nt) 100)
+                           ((eq system-type 'gnu/linux) 190)))
+
+(set-face-attribute 'default nil
+                    :family "ibm plex mono"
+                    :width 'normal
+                    :height my-font-height
+                    :weight 'normal)
+
 
 (require 'linum)
 (set-face-attribute 'linum nil

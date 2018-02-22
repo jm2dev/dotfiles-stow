@@ -1,13 +1,13 @@
 URxvt.termName:         rxvt-256color
 
-URxvt*.font: xft:Source Code Pro:style=Regular:size=17:antialias=true
-URxvt*.boldFont: xft:Source Code Pro:style=Bold:size=17:antialias=true
-URxvt*.italicFont: xft:Source Code Pro:style=Italic:size=17:antialias=true
-URxvt*.boldItalicFont: xft:Source Code Pro:style=Bold Italic:size=17:antialias=true
+URxvt*.font: xft:ibm plex mono:style=Light:size=17:antialias=true
+URxvt*.boldFont: xft:ibm plex mono:style=SemiBold:size=17:antialias=true
+URxvt*.italicFont: xft:ibm plex mono:style=Italic:size=17:antialias=true
+URxvt*.boldItalicFont: xft:ibm plex mono:style=SemiBold Italic:size=17:antialias=true
 !URxvt.letterSpace:      -1
 
 URxvt.perl-ext-common:  default,matcher
-URxvt.urlLauncher:      firefox
+URxvt.urlLauncher:      qutebrowser
 URxvt.matcher.button:   1
 
 URxvt.saveLines:        14095
