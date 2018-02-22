@@ -4,3 +4,6 @@ target/
 idea.sbt
 ironbank-kubernetes/
 klarna-kubernetes/
+emacs/.emacs.d/*
+!emacs/.emacs.d/init.el
+

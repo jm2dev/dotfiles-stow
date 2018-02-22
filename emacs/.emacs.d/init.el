@@ -66,34 +66,24 @@
                     :height my-font-height
                     :weight 'normal)
 
-
 (menu-bar-mode -1)
 (when (display-graphic-p)
   (tool-bar-mode -1)
   (scroll-bar-mode -1))
 
-(set-face-attribute 'vertical-border nil :foreground (face-attribute 'fringe :background))
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (zenburn)))
- '(custom-safe-themes
-   (quote
-    ("bfdcbf0d33f3376a956707e746d10f3ef2d8d9caa1c214361c9c08f00a1c8409" default)))
- '(package-selected-packages
-   (quote
-    (terraform-mode magit ensime zenburn-theme use-package))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-
 ;; ensime
 (use-package ensime
   :ensure t
   :pin melpa-stable)
+
+;; http://pages.sachachua.com/.emacs.d/Sacha.html
+(defadvice color-theme-alist (around sacha activate)
+  (if (ad-get-arg 0)
+      ad-do-it
+    nil))
+(use-package zenburn-theme)
+
+(prefer-coding-system 'utf-8)
+(when (display-graphic-p)
+  (setq x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING)))
+
