@@ -1,14 +1,9 @@
 (set-prefix-key (kbd "C-z"))
 
-;; http://www.mygooglest.com/fni/stumpwm.html
-;; set the font for the message bar and input bar
-;; (set-font "-*-FreeMono-medium-r-*-*-6*")
-(set-font "-*-terminus-medium-r-normal-*-18*")
-;(load-module "ttf-fonts")
-;(set-font (make-instance 'xft:font :family "Anonymous Pro" :subfamily "Regular" :size 18))
-
-;; modeline foreground color
-;(setf *mode-line-foreground-color* "palegreen3")
-
-;; modeline border color
-;(setf *mode-line-border-color* "palegreen3")
+;; run an `urxvt' terminal (instead of `xterm')
+;; TODO Install `rxvt-unicode'
+;; FIXME If urxvt is not installed, let default keybinding
+(defcommand urxvt () ()
+  "Start an urxvt instance or switch to it, if it is already running."
+  (run-or-raise "urxvt" '(:instance "urxvt")))
+(define-key *root-map* (kbd "c") "urxvt")
