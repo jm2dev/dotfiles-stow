@@ -7,3 +7,4 @@ klarna-kubernetes/
 emacs/.emacs.d/*
 !emacs/.emacs.d/init.el
 
+monitores/bin/lein

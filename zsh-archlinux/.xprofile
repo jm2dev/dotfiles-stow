@@ -1,0 +1,7 @@
+xrdb -I$HOME /home/jm/.Xresources &
+
+setxkbmap -layout us -variant altgr-intl -option compose:rctrl -option ctrl:nocaps &
+
+/home/jm/bin/un-monitor.sh &
+
+
