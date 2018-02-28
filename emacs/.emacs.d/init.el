@@ -43,7 +43,9 @@
  '(custom-safe-themes
    (quote
     ("bfdcbf0d33f3376a956707e746d10f3ef2d8d9caa1c214361c9c08f00a1c8409" default)))
- '(package-selected-packages (quote (ensime solarized-theme zenburn-theme use-package))))
+ '(package-selected-packages
+   (quote
+    (cider clojure-mode projectile better-defaults ensime solarized-theme zenburn-theme use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -163,3 +165,13 @@
 (setq org-refile-targets '(("~/src/orgmode/gtd/gtd.org" :maxlevel . 3)
                            ("~/src/orgmode/gtd/someday.org" :level . 1)
                            ("~/src/orgmode/gtd/tickler.org" :maxlevel . 2)))
+
+;; emacs clojure
+(defvar my-packages '(better-defaults
+                      projectile
+                      clojure-mode
+                      cider))
+
+(dolist (p my-packages)
+  (unless (package-installed-p p)
+    (package-install p)))
