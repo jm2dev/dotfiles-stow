@@ -7,6 +7,6 @@ EXT="HDMI2"
 
 #xrandr --output $IN --auto $EXT --off
 xrandr --output eDP1 --auto --output HDMI2 --off
-feh  --bg-fill /home/jm/Pictures/wallpapers/arch_linux_by_shapshapy-d4gfyuf.png
+feh  --bg-fill /home/jm/Pictures/wallpapers/latest.jpg
 #/home/jm/Pictures/wallpapers/Fedora-Backgrounds-HD-12.jpg
 
