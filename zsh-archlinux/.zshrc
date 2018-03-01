@@ -23,6 +23,10 @@ export GOPATH=$HOME/src/go; [[ :$PATH: == *":$GOPATH/bin:"* ]] || PATH+=":$GOPAT
 # Added by n-install (see http://git.io/n-install-repo).
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
 
+export RBENV="$HOME/.rbenv"; [[ :$PATH: == *":$RBENV/bin:"* ]] || PATH+=":$HOME/.rbenv/bin"
+eval "$(rbenv init -)"
+source $HOME/.rbenv/completions/rbenv.zsh
+
 # it must be run at the end.
 # debian
 #source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
