@@ -1,4 +1,4 @@
-(set-prefix-key (kbd "C-z"))
+(set-prefix-key (kbd "M-z"))
 
 ;; run an `urxvt' terminal (instead of `xterm')
 ;; TODO Install `rxvt-unicode'
