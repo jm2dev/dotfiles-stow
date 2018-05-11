@@ -7,7 +7,7 @@ URxvt*.boldItalicFont: xft:IBM Plex mono:style=SemiBold Italic:size=19:antialias
 !URxvt.letterSpace:      -1
 
 URxvt.perl-ext-common:  default,matcher
-URxvt.urlLauncher:      qutebrowser
+URxvt.urlLauncher:      firefox
 URxvt.matcher.button:   1
 
 URxvt.saveLines:        14095

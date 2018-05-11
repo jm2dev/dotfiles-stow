@@ -27,6 +27,11 @@ export RBENV="$HOME/.rbenv"; [[ :$PATH: == *":$RBENV/bin:"* ]] || PATH+=":$HOME/
 eval "$(rbenv init -)"
 source $HOME/.rbenv/completions/rbenv.zsh
 
+export CSPATH="$HOME/.conscript"; [[ :$PATH: == *":CSPATH/bin:"* ]] || PATH+=":$CSPATH/bin"
+
+# remove duplicates in $PATH
+typeset -U path
+
 # it must be run at the end.
 # debian
 #source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

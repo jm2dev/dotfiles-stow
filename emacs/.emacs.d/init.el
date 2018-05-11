@@ -42,10 +42,10 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("bfdcbf0d33f3376a956707e746d10f3ef2d8d9caa1c214361c9c08f00a1c8409" default)))
+    ("61ae193bf16ef5c18198fbb4516f0c61a88f7b55b693a3b32d261d8501c4a54b" "bfdcbf0d33f3376a956707e746d10f3ef2d8d9caa1c214361c9c08f00a1c8409" default)))
  '(package-selected-packages
    (quote
-    (cider clojure-mode projectile better-defaults ensime solarized-theme zenburn-theme use-package))))
+    (markdown-mode ox-reveal adoc-mode magit anti-zenburn-theme cider clojure-mode projectile better-defaults ensime solarized-theme zenburn-theme use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -58,7 +58,7 @@
   (if (ad-get-arg 0)
       ad-do-it
     nil))
-(use-package zenburn-theme)
+(use-package anti-zenburn-theme)
 
 (prefer-coding-system 'utf-8)
 (when (display-graphic-p)
@@ -80,7 +80,7 @@
   (tool-bar-mode -1)
   (scroll-bar-mode -1))
 
-(load-theme 'zenburn)
+(load-theme 'anti-zenburn)
 ;(set-face-attribute 'default nil :height 194)
 ;(set-face-attribute 'fringe nil :background "#2d2d2d")
 ;(set-face-attribute 'default nil :family "Source Code Pro")
@@ -175,3 +175,32 @@
 (dolist (p my-packages)
   (unless (package-installed-p p)
     (package-install p)))
+
+;; asciidoc
+(add-to-list 'auto-mode-alist (cons "\\.adoc\\'" 'adoc-mode))
+
+;; Reveal.js + Org mode
+(require 'ox-reveal)
+(setq Org-Reveal-root "file:///home/jm/src/github/reveal.js")
+(setq Org-Reveal-title-slide nil)
+
+;; markdow-mode
+(use-package markdown-mode
+  :ensure t
+  :commands (markdown-mode gfm-mode)
+  :mode (("README\\.md\\'" . gfm-mode)
+         ("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode))
+  :init (setq markdown-command "multimarkdown"))
+
+
+;; clojure
+(unless (package-installed-p 'clojure-mode)
+  (package-install 'clojure-mode))
+
+(add-hook 'clojure-mode-hook #'subword-mode)
+
+(add-hook 'clojure-mode-hook #'smartparens-strict-mode)
+
+(add-hook 'clojure-mode-hook #'aggressive-indent-mode)
+
