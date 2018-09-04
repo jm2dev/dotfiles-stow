@@ -42,10 +42,10 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("61ae193bf16ef5c18198fbb4516f0c61a88f7b55b693a3b32d261d8501c4a54b" "bfdcbf0d33f3376a956707e746d10f3ef2d8d9caa1c214361c9c08f00a1c8409" default)))
+    ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "61ae193bf16ef5c18198fbb4516f0c61a88f7b55b693a3b32d261d8501c4a54b" "bfdcbf0d33f3376a956707e746d10f3ef2d8d9caa1c214361c9c08f00a1c8409" default)))
  '(package-selected-packages
    (quote
-    (markdown-mode ox-reveal adoc-mode magit anti-zenburn-theme cider clojure-mode projectile better-defaults ensime solarized-theme zenburn-theme use-package))))
+    (color-theme-solarized terraform-mode markdown-mode ox-reveal adoc-mode magit anti-zenburn-theme cider clojure-mode projectile better-defaults ensime solarized-theme zenburn-theme use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -58,7 +58,8 @@
   (if (ad-get-arg 0)
       ad-do-it
     nil))
-(use-package anti-zenburn-theme)
+;(use-package anti-zenburn-theme)
+(use-package color-theme-solarized)
 
 (prefer-coding-system 'utf-8)
 (when (display-graphic-p)
@@ -80,7 +81,8 @@
   (tool-bar-mode -1)
   (scroll-bar-mode -1))
 
-(load-theme 'anti-zenburn)
+(load-theme 'solarized-dark)
+;(load-theme 'anti-zenburn)
 ;(set-face-attribute 'default nil :height 194)
 ;(set-face-attribute 'fringe nil :background "#2d2d2d")
 ;(set-face-attribute 'default nil :family "Source Code Pro")

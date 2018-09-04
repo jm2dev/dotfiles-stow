@@ -29,6 +29,9 @@ source $HOME/.rbenv/completions/rbenv.zsh
 
 export CSPATH="$HOME/.conscript"; [[ :$PATH: == *":CSPATH/bin:"* ]] || PATH+=":$CSPATH/bin"
 
+# no more grey intellij idea
+export _JAVA_AWT_WM_NONREPARENTING=1
+
 # remove duplicates in $PATH
 typeset -U path
 

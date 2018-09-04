@@ -21,6 +21,7 @@ alias colores='xrdb -I$HOME ~/.Xresources'
 alias mkvirtualenv3='mkvirtualenv -p /usr/bin/python3'
 alias bateria='grep POWER_SUPPLY_CAPACITY /sys/class/power_supply/BAT0/uevent'
 alias teclado='setxkbmap -layout us -variant altgr-intl -option compose:rctrl -option ctrl:nocaps'
-
+alias salvapantallas='xscreensaver-command -lock'
+alias pantallazo="scrot -d 5 -c -e 'mv $f ~/Pictures/pantallazos/'"
 # openjdk 9
 #export JDK_HOME=/usr/lib/jvm/default
